@@ -285,9 +285,9 @@ export default function page() {
               </div>
             </div>
             <div className='bg-[#FFF] rounded-[10px] mb-5 '>
-              {profile.map((item,index) => {
+              {profile.map((item) => {
                 return(
-                  <div>
+                  <div key={item.id}>
                     <div className="relative after:content-[''] after:absolute after:bg-[#E9ECEF] after:w-[85%] after:h-[2px] after:left-0 after:right-0 after:m-auto  after:last:hidden ">
                       <div className="flex items-center justify-between px-10 py-2">
                         <h5 className="text-[14px] font-[500] text-[#333333]">{item.heading}</h5>
@@ -336,9 +336,9 @@ export default function page() {
               <div className='flex items-center gap-5 ' >
                 <h5 className='text-[#737A91] text-[14px] font-[500] ' >Similar:</h5>
                 <div className='flex items-center gap-2'>
-                  {similar.map((item , index) => {
+                  {similar.map((item ) => {
                     return(
-                      <div className=' '>
+                      <div key={item.id}>
                         <p className='text-[#737A91] text-[12px] font-[500] py-3 px-5 border-[#737A91] border-solid border-[1px] rounded-[5px] cursor-pointer ' >{item.heading}</p>
                       </div>
                     )
@@ -348,7 +348,7 @@ export default function page() {
               <p className='absolute bg-[#E9ECEF] w-[100%] h-[1px] -bottom-7 '></p>
             </div>
             <div className='my-10'>
-              {jobs.map((item , index) => {
+              {jobs.map((item ) => {
                 return(
                   <div key={item.title} >
                     <div className=' flex items-center gap-5 '>
@@ -371,13 +371,13 @@ export default function page() {
                               </div>
                               <div className=' flex items-center gap-2 mb-3 relative '>
                                 <FaRegClock className='text-[#585D6E]' />
-                                <p className="text-[#585D6E] text-[12px] font-[500] flex gap-5 after:content-[''] after:absolute after:bg-[#E9ECEF] after:w-[2px] after:h-[20px] after:right-33 2xl:after:right-20   ">{i.time} <span className='text-[#0154AA]' >{i.applicants}</span></p>
+                                <p className="text-[#585D6E] text-[12px] font-[500] flex gap-5 after:content-[''] after:absolute after:bg-[#E9ECEF] after:w-[2px] after:h-[20px] after:right-33 2xl:after:right-22   ">{i.time} <span className='text-[#0154AA]' >{i.applicants}</span></p>
                               </div>
                               <div className='flex items-center justify-between gap-2'>
                                 <div className="bg-[#0154AA] py-2 px-5 rounded-[8px]  cursor-pointer   ">
-                                  <button className=" m-auto text-[#FFF] text-[12px] font-[500] cursor-pointer">
+                                  <span className=" m-auto text-[#FFF] text-[12px] font-[500] cursor-pointer">
                                     Apply Now
-                                  </button>
+                                  </span>
                                 </div>
                                   <Image src="/assets/save.png" alt='save' width={12} height={16} ></Image>
                               </div>
