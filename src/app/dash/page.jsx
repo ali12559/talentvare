@@ -326,9 +326,9 @@ export default function page() {
                   <p className='text-[#585D6E] text-[14px] font-[500] flex items-center gap-3 ' >Job Type <FaChevronDown /> </p>
                 </div>
                 <div className="bg-[#0154AA] py-3 px-8 rounded-[10px] cursor-pointer   ">
-                  <button className="flex items-center gap-2 m-auto text-[#FFF] text-[16px] font-[500] cursor-pointer">
+                  <span className="flex items-center gap-2 m-auto text-[#FFF] text-[16px] font-[500] cursor-pointer">
                     <CiSearch className='text-[25px]' /> Search
-                  </button>
+                  </span>
                 </div>
               </div>
             </div>
